@@ -1,15 +1,13 @@
 "use client";
-import { useSession } from "next-auth/react";
+
+import ProtectedComponent from "@/components/Profile/Protected";
 
 const ProtectedClientPage = () => {
-  const { data: session } = useSession();
 
   return (
     <div>
       <h1 style={{ color: "red" }}>ProtectedClientPage</h1>
-      <p style={{ color: "red" }}>
-        You are Logged as <b>{session?.user?.name}@INDIA</b>
-      </p>
+      <ProtectedComponent/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 
 const SignIn = ({ callbackUrl }) => {
   return (
@@ -10,6 +11,11 @@ const SignIn = ({ callbackUrl }) => {
       <div style={{ margin: "30px 0" }}>
         <button onClick={() => signIn("google", { callbackUrl })}>
           Contiou with Google
+        </button>
+      </div>
+      <div style={{ margin: "30px 0" }}>
+        <button>
+          <Link href="/signup">SignUp</Link>
         </button>
       </div>
     </div>

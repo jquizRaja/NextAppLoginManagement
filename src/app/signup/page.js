@@ -1,9 +1,10 @@
+import SignUp from "@/components/Auth/SignUp";
 import React from "react";
 
 const SignUpPage = () => {
   return (
     <div>
-      <h1 style={{ color: "green" }}>SignUpPage</h1>
+      <SignUp />
     </div>
   );
 };

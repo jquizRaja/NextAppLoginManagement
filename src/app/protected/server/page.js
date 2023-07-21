@@ -1,5 +1,6 @@
 "use server";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import ProtectedComponent from "@/components/Profile/Protected";
 import { getServerSession } from "next-auth";
 
 const ProtectedServerPage = async () => {
@@ -7,9 +8,7 @@ const ProtectedServerPage = async () => {
   return (
     <div>
       <h1 style={{ color: "green" }}>ProtectedServerPage</h1>
-      <p style={{ color: "green" }}>
-        You are Logged as <b>{session?.user?.name}@INDIA</b>
-      </p>
+      <ProtectedComponent user={session?.user} />
     </div>
   );
 };

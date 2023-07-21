@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "bcrpyt": "^2.0.0",
+    "bcrypt": "^5.1.0",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.0",
     "next": "13.4.10",
